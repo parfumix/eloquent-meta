@@ -1,0 +1,24 @@
+{
+    "name": "parfumix/eloquent-meta",
+    "description": "Eloquent meta, meta attributes",
+    "keywords": ["eloquent", "taxonomy", "laravel", "php"],
+    "homepage": "https://github.com/parfumix/eloquent-meta",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Radu Bordei",
+            "email": "radu.bordei89@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "laravel/framework": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eloquent\\Meta\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
