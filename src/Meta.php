@@ -10,6 +10,8 @@ class Meta extends Model {
 
     public $fillable = ['metaable_id', 'metaable_type', 'key', 'value'];
 
+    public $timestamps = false;
+
     public function metaable() {
         return $this->morphTo();
     }
