@@ -10,7 +10,7 @@ trait MetaTrait {
      * @return mixed
      */
     public function meta() {
-        return $this->morphMany(Meta::class, 'metaable');
+        return $this->morphMany($this->metaClass(), 'metaable');
     }
 
     /**
@@ -73,5 +73,14 @@ trait MetaTrait {
         $this->meta()
             ->whereIn('key', $key)
             ->delete();
+    }
+
+    /**
+     * Get meta class.
+     *
+     * @return mixed
+     */
+    protected function metaClass() {
+        return isset($this['metaClass']) ? $this['metaClass'] : Meta::class;
     }
 }
