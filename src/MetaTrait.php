@@ -20,7 +20,7 @@ trait MetaTrait {
      * @return mixed
      *
      */
-    public function syncMeta(array $meta) {
+    public function syncMeta(array $meta = []) {
         $dbMeta = $this->meta()->lists('value', 'key')
             ->toArray();
 
