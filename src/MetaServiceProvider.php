@@ -12,7 +12,7 @@ class MetaServiceProvider extends ServiceProvider {
      */
     public function boot() {
         $this->publishes([
-            __DIR__ . DIRECTORY_SEPARATOR . '../assets/migrations/' => base_path('database/migrations')
+            __DIR__ . DIRECTORY_SEPARATOR . '../migrations/' => base_path('database/migrations')
         ], 'migrations');
     }
 
