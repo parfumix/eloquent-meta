@@ -48,9 +48,8 @@ trait MetaTrait {
                 ->where('key', $key)
                 ->first();
 
-            if( isset($meta) )
-                $meta->fill(['value' => $value])
-                    ->save();
+            if( ! is_null($meta) )
+                $meta->update(['value' => $value]);
         });
 
         return $this;
